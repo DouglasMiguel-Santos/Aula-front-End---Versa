@@ -541,3 +541,143 @@ footer img {
     color: var(--texto-claro);
     background-color: var(--cor-primaria);
 }
+
+/* ========================================= */
+/* RESPONSIVIDADE (Tablets e Celulares)      */
+/* ========================================= */
+
+/* Telas médias (Tablets) */
+@media (max-width: 992px) {
+    .container {
+        margin: 0 4%;
+    }
+
+    #segmentoContent {
+        grid-template-columns: 1fr;
+    }
+
+    .footerContent {
+        flex-wrap: wrap;
+    }
+
+    .footerInfo {
+        width: 45%;
+    }
+}
+
+/* Telas pequenas (Celulares) */
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .navbar {
+        position: relative;
+        /* Evita que o menu estendido cubra o texto */
+        padding: 1rem;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-container ul {
+        margin-right: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 0;
+    }
+
+    /* Hero Section */
+    .hero {
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    /* Apresentação Módulos (Slider) */
+    .slider {
+        padding: 30px 10px;
+    }
+
+    .modulos {
+        flex-direction: column;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .text-teste h3 {
+        font-size: 56px;
+    }
+
+    .image-modulo {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .image-modulo img {
+        max-width: 100%;
+    }
+
+    /* Segmentos de Atuação */
+    #segmentoAtuacao h2,
+    #conhecaModulos h2 {
+        font-size: 28px;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .card_segmento_atuacao {
+        height: auto;
+    }
+
+    /* Conheça os Módulos */
+    .cardModulo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .cardModulo img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+    }
+
+    .cardModulo-content {
+        align-items: center;
+        padding: 10px 0 0 0;
+    }
+
+    /* Footer */
+    .footerContent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footerInfo {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footerInput {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footerInput input {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .footerInput button {
+        width: 100%;
+        border-radius: 8px;
+    }
+}
