@@ -7,6 +7,8 @@
 
 body {
     background-color: var(--bg-secundario);
+    color: var(--texto-principal);
+    line-height: 1.6;
 }
 
 
@@ -45,6 +47,7 @@ body {
     /* 🌟 Extras úteis */
     --sombra-leve: 0 4px 12px rgba(0, 0, 0, 0.05);
     --sombra-media: 0 8px 24px rgba(0, 0, 0, 0.08);
+    --sombra-forte: 0 12px 32px rgba(0, 0, 0, 0.12);
 
     /* 🎨 Gradiente principal (ótimo pra hero) */
     --gradiente-primario: linear-gradient(135deg, #d1e9ec, #6cc4cf);
@@ -64,10 +67,15 @@ body {
 }
 
 .nav-container {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+}
+
+.nav-container ul {
+
+    margin-right: 20px;
 }
 
 .navbar {
@@ -76,22 +84,14 @@ body {
     padding: 1rem 0;
     position: fixed;
     width: 100%;
-
     z-index: 999;
-
-
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
     font-size: 1.5rem;
     color: white;
     font-weight: 600;
-}
-
-.nav-container {
-    display: flex;
-    align-items: center;
-    gap: 40px;
 }
 
 .nav-links {
@@ -121,11 +121,13 @@ body {
     font-weight: bold;
     text-decoration: none;
     border: none;
+    transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: white;
-    transform: translateY(2px);
+    background-color: var(--bg-secundario);
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-leve);
 }
 
 .btn-secundary {
@@ -136,6 +138,13 @@ body {
     font-weight: bold;
     text-decoration: none;
     border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-secundary:hover {
+    background-color: var(--cor-primaria-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-leve);
 }
 
 
@@ -146,7 +155,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 75vh;
-    background: linear-gradient(var(--cor-primaria), var(--bg-footer)), url('assets/image/banner1.jpg');
+    background: linear-gradient(rgba(22, 148, 165, 0.85), rgba(15, 47, 51, 0.95)), url('assets/image/banner1.jpg');
     color: #fff;
     background-repeat: no-repeat;
     background-size: cover;
@@ -204,12 +213,6 @@ body {
 }
 
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-
-}
-
 .slider {
     position: relative;
     overflow: hidden;
@@ -238,11 +241,17 @@ body {
     cursor: pointer;
     font-size: 30px;
     align-items: center;
+    transition: all 0.3s ease;
 }
 
 .arrow.right {
     left: auto;
     right: 20px;
+}
+
+.arrow:hover {
+    background: var(--cor-primaria);
+    color: white;
 }
 
 
@@ -279,90 +288,68 @@ body {
     min-width: 70%;
     height: 348px;
     margin: 0 auto;
-    border-radius: 20px;
-    transition: ease 0.8s;
-    box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.39);
+    border-radius: 16px;
+    transition: all 0.4s ease;
+    box-shadow: var(--sombra-leve);
+    background-color: var(--bg-principal);
+    border: 1px solid var(--borda);
     text-align: center;
     justify-content: center;
-    gap: 40px;
-    padding: 20px;
+    gap: 20px;
+    padding: 30px;
 
     & h3 {
-        font-size: 45px;
-
-
+        font-size: 32px;
+        margin-bottom: 10px;
     }
 
     & h5 {
-        font-size: 24px;
+        font-size: 20px;
+        color: var(--texto-principal);
         margin-bottom: 10px;
-
     }
 
     & p {
-        font-size: 20px;
-        color: white;
+        font-size: 16px;
+        color: var(--texto-secundario);
     }
-
-
-
 }
 
 .segmento1 {
-    background-color: var(--card-1);
+    border-top: 5px solid var(--card-1);
 
     & h3 {
-
-        color: color-mix(in srgb, var(--card-1) 60%, white)
-    }
-
-    & h5 {
-        color: color-mix(in srgb, var(--card-1) 30%, white)
+        color: var(--card-1);
     }
 }
 
 .segmento2 {
-    background-color: var(--card-2);
+    border-top: 5px solid var(--card-2);
 
     & h3 {
-
-        color: color-mix(in srgb, var(--card-2) 60%, white)
-    }
-
-    & h5 {
-        color: color-mix(in srgb, var(--card-2) 30%, white)
+        color: var(--card-2);
     }
 }
 
 .segmento3 {
-    background-color: var(--card-3);
+    border-top: 5px solid var(--card-3);
 
     & h3 {
-
-        color: color-mix(in srgb, var(--card-3) 60%, white)
-    }
-
-    & h5 {
-        color: color-mix(in srgb, var(--card-3) 30%, white)
+        color: var(--card-3);
     }
 }
 
 .segmento4 {
-    background-color: var(--card-4);
+    border-top: 5px solid var(--card-4);
 
     & h3 {
-
-        color: color-mix(in srgb, var(--card-4) 60%, white)
-    }
-
-    & h5 {
-        color: color-mix(in srgb, var(--card-4) 30%, white)
+        color: var(--card-4);
     }
 }
 
 .card_segmento_atuacao:hover {
-    transform: scale(1.05);
-
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-forte);
 }
 
 /* Seção conheca os Modulos */
@@ -375,7 +362,6 @@ body {
     justify-content: center;
     background-color: var(--bg-secundario);
     padding: 30px 50px;
-    border: 1px solid
 }
 
 #conhecaModulos h2 {
@@ -386,23 +372,27 @@ body {
 
 .cardModulo {
     display: flex;
-    background: var(--gradiente-primario);
-    padding: 20px;
-    gap: 80px;
-    border-radius: 20px;
-    box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.486);
+    background: var(--bg-principal);
+    padding: 30px;
+    gap: 40px;
+    border-radius: 16px;
+    box-shadow: var(--sombra-media);
+    border: 1px solid var(--borda);
     width: 90%;
+    transition: all 0.3s ease;
+}
 
+.cardModulo:hover {
+    box-shadow: var(--sombra-forte);
+    transform: translateY(-4px);
 }
 
 .cardModulo img {
-    MIN-width: 250px;
-    height: 250PX;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 20px;
-    box-shadow: 3PX 3PX 6PX rgba(0, 0, 0, 0.377);
-
+    border-radius: 12px;
+    box-shadow: var(--sombra-leve);
 }
 
 .cardModulo-content {
@@ -414,48 +404,48 @@ body {
 }
 
 .cardModulo-content h3 {
-    font-size: 36px;
+    font-size: 32px;
     color: var(--texto-principal);
 }
 
 .cardModulo-content p {
-    font-size: 20px;
+    font-size: 16px;
     color: var(--texto-secundario);
 }
 
 
 
 .btn-card {
-    background-color: var(--bg-footer);
-    width: 200px;
-    padding: 5px;
-    border-radius: 20px;
+    background-color: var(--cor-primaria);
+    width: max-content;
+    padding: 10px 24px;
+    border-radius: 8px;
     text-align: center;
     color: white;
     font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
-
+    transition: all 0.3s ease;
 }
 
 .btn-card:hover {
-
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-primaria-hover);
+    transform: translateY(-2px);
 }
 
 /* FOOTER */
 
 footer {
-    background-color: var(--bg-destaque);
-    border-radius: 30px 20px 0 0;
-    margin-top: 50px;
-
+    background-color: var(--bg-footer);
+    color: var(--texto-claro);
+    border-radius: 30px 30px 0 0;
+    margin-top: 80px;
+    padding-top: 20px;
 }
 
 footer img {
-    border: 1px solid gray;
-    /* temporario ate ter iamgem */
-    padding: 10px;
-    margin-left: 30px;
+    margin: 10px 20px;
+    width: 70px;
 }
 
 .footerContent {
@@ -471,7 +461,7 @@ footer img {
 .footerCoprite {
     display: flex;
     /* border: 1px solid blue; */
-    padding: 10px;
+    padding: 20px;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -493,20 +483,27 @@ footer img {
 
 .footerInfo h2 {
     width: 100%;
-    font-weight: bold;
+    font-weight: 600;
     /* border: 1px solid red; */
-    color: var(--texto-principal);
+    color: var(--texto-claro);
+    margin-bottom: 10px;
+    font-size: 18px;
 }
 
 .footerInfo p {
     width: 100%;
-    color: var(--texto-secundario);
+    color: var(--texto-muted);
 }
 
 .footerInfo a {
     width: 100%;
     text-decoration: none;
-    color: var(--texto-secundario)
+    color: var(--texto-muted);
+    transition: color 0.3s ease;
+}
+
+.footerInfo a:hover {
+    color: var(--cor-primaria-light);
 }
 
 .footerInput {
@@ -519,22 +516,25 @@ footer img {
 
 .footerInput input {
     width: 80%;
-    height: 30px;
+    height: 40px;
     border-radius: 20px 0 0 20px;
     padding: 10px;
     border: none;
-
+    outline: none;
 }
 
 .footerInput button {
     width: 20%;
-    height: 30px;
+    height: 40px;
+
     border-radius: 0 20px 20px 0;
     border: none;
     background-color: var(--cor-primaria-light);
     color: var(--texto-principal);
+    font-weight: 600;
     text-align: center;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .footerInput button:hover {
