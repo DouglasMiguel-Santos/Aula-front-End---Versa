@@ -146,7 +146,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 75vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url('assets/image/banner1.jpg');
+    background: linear-gradient(var(--cor-primaria), var(--bg-footer)), url('assets/image/banner1.jpg');
     color: #fff;
     background-repeat: no-repeat;
     background-size: cover;
