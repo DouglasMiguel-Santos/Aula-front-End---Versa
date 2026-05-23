@@ -605,7 +605,7 @@ footer img {
     }
 
     #menu-aberto {
-        display: flex;
+        display: none;
         flex-direction: column;
         height: auto;
         justify-content: center;
@@ -754,4 +754,17 @@ footer img {
         width: 100%;
         border-radius: 8px;
     }
+}
+
+
+
+
+
+
+
+
+
+
+.ativo {
+    display: flex !important;
 }
