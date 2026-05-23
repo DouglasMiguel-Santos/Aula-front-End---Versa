@@ -63,11 +63,30 @@ body {
 }
 
 
+
+#hamburguer {
+    display: none;
+    color: #fff;
+}
+
+#menu-aberto {
+    display: none;
+
+}
+
 /* .container {
     margin: 0 8%;
 } */
 
 .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.nav-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -557,9 +576,10 @@ footer img {
 /* ========================================= */
 
 /* Telas médias (Tablets) */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .container {
         margin: 0 4%;
+
     }
 
     #segmentoContent {
@@ -573,10 +593,54 @@ footer img {
     .footerInfo {
         width: 45%;
     }
+
+    #hamburguer {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+
+
+    }
+
+    #menu-aberto {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+        padding: 10px 8%;
+        position: absolute;
+        background: white;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+    }
+
+    #menu-aberto ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        gap: 10px;
+    }
+
+    #menu-aberto ul li a {
+        list-style: none;
+        color: var(--cor-primaria);
+        text-decoration: none;
+        font-weight: 600;
+    }
 }
 
 /* Telas pequenas (Celulares) */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+
+    .nav-menu {
+        display: none;
+
+
+    }
 
     /* Navbar */
     .navbar {
@@ -586,7 +650,7 @@ footer img {
     }
 
     .nav-container {
-        flex-direction: column;
+
         gap: 15px;
     }
 
