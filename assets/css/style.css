@@ -193,8 +193,7 @@ body {
     display: flex;
     margin-top: 60px;
     align-items: center;
-
-
+    padding: 60px;
 }
 
 .image-modulo {
@@ -232,7 +231,6 @@ body {
 .right {
     width: 400px;
     height: 300px;
-    background: #ccc;
     border-radius: 30px;
 }
 
@@ -241,13 +239,12 @@ body {
     position: absolute;
     top: 50%;
     left: 20px;
-    background: #ddd;
     border: none;
-    border-radius: 50%;
     width: 40px;
     height: 40px;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 70px;
+    background: transparent;
     align-items: center;
     transition: all 0.3s ease;
 
@@ -259,8 +256,7 @@ body {
 }
 
 .arrow:hover {
-    background: var(--cor-primaria);
-    color: white;
+    color: var(--cor-primaria);
 }
 
 
