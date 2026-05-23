@@ -9,6 +9,7 @@ body {
     background-color: var(--bg-secundario);
     color: var(--texto-principal);
     line-height: 1.6;
+
 }
 
 
@@ -81,7 +82,7 @@ body {
 .navbar {
     background-color: var(--cor-primaria);
 
-    padding: 1rem 0;
+    padding: 1rem 8%;
     position: fixed;
     width: 100%;
     z-index: 999;
@@ -160,6 +161,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    padding: 0 8%;
 }
 
 .hero h1 {
@@ -179,6 +181,8 @@ body {
 
     align-items: center;
     justify-content: space-between;
+    padding: 0 8%;
+
 }
 
 .modulos {
@@ -186,7 +190,7 @@ body {
     display: flex;
     margin-top: 60px;
     align-items: center;
-    padding: 50px;
+
 }
 
 .image-modulo {
@@ -261,7 +265,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 50px;
+    padding: 50px 8%;
 
 
 }
@@ -361,7 +365,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: var(--bg-secundario);
-    padding: 30px 50px;
+    padding: 30px 8%;
 }
 
 #conhecaModulos h2 {
